@@ -1,0 +1,23 @@
+.header {
+  background-color: #c0c0ec;
+  height: 6vh;
+  display: flex;
+  padding: 8px 12px;
+  justify-content: space-between;
+  &-logo {
+    align-self: center;
+  }
+  &-auth {
+    display: flex;
+    gap: 8px;
+  }
+  &-username {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+  }
+}
+h3 {
+  margin: 0;
+}

@@ -1,0 +1,5 @@
+<div class="list">
+  @defer (when (todos)) { @for (todo of todos; track $index) {
+  <app-todo-card [todo]="todo"> </app-todo-card>
+  } } @placeholder { Loading... }
+</div>

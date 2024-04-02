@@ -1,0 +1,15 @@
+.form {
+  max-width: 450px;
+  max-height: 600px;
+  min-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 14px;
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+}
+

@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="header-logo">
+    <img
+      src="../../../../../assets/icons/header-logo.png"
+      alt="Todo-list-app"
+    />
+  </div>
+  <div class="header-auth">
+    @if (loggedIn) {
+    <img [src]="user?.image" />
+    <button type="button" mat-button>
+      {{ user?.firstName }}
+    </button>
+    <button (click)="logOut()" type="button" mat-button>Log Out</button>
+    } @else {
+    <button (click)="openDialog('login')" type="button" mat-button>
+      Log In
+    </button>
+    }
+  </div>
+</header>

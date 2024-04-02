@@ -1,0 +1,38 @@
+<form [formGroup]="authForm" class="form">
+  <h2>
+    {{ data.type === "login" ? "Log In" : "Sign Up" }}
+  </h2>
+  <mat-form-field>
+    <mat-label>Enter your username</mat-label>
+    <input
+      matInput
+      placeholder="username"
+      [formControlName]="'username'"
+      required
+    />
+    @if (authForm.get('username')?.invalid ) {
+    <mat-error>Wrong username</mat-error>
+    }
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Enter your password</mat-label>
+    <input
+      matInput
+      placeholder="password"
+      [formControlName]="'password'"
+      required
+    />
+    @if (authForm.get('password')?.invalid) {
+    <mat-error>Wrong data</mat-error>
+    }
+  </mat-form-field>
+  <button
+    (click)="onSubmit()"
+    [disabled]="authForm.invalid"
+    type="submit"
+    mat-raised-button
+    color="primary"
+  >
+    {{ data.type === "login" ? "Log In" : "Sign Up" }}
+  </button>
+</form>
